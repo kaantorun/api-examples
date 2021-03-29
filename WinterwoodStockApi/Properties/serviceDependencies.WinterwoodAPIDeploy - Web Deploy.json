@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/winterwoor-api-service-resource/apis/winterwoodapi",
+      "type": "apis.azure"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/winterwood-stock/databases/WinterwoodStockApi_db",
+      "type": "mssql.azure",
+      "connectionId": "BatchDBContextConnectionString",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

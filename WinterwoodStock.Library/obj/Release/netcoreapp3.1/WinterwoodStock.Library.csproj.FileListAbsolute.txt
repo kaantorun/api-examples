@@ -1,0 +1,12 @@
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\bin\Release\netcoreapp3.1\WinterwoodStock.Library.deps.json
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\bin\Release\netcoreapp3.1\WinterwoodStock.Library.runtimeconfig.json
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\bin\Release\netcoreapp3.1\WinterwoodStock.Library.runtimeconfig.dev.json
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\bin\Release\netcoreapp3.1\WinterwoodStock.Library.dll
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\bin\Release\netcoreapp3.1\WinterwoodStock.Library.pdb
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\obj\Release\netcoreapp3.1\WinterwoodStock.Library.csprojAssemblyReference.cache
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\obj\Release\netcoreapp3.1\WinterwoodStock.Library.AssemblyInfoInputs.cache
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\obj\Release\netcoreapp3.1\WinterwoodStock.Library.AssemblyInfo.cs
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\obj\Release\netcoreapp3.1\WinterwoodStock.Library.csproj.CoreCompileInputs.cache
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\obj\Release\netcoreapp3.1\WinterwoodStock.Library.dll
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\obj\Release\netcoreapp3.1\WinterwoodStock.Library.pdb
+C:\Users\kaant\git\winterwood\WinterwoodStock.Library\obj\Release\netcoreapp3.1\WinterwoodStock.Library.genruntimeconfig.cache

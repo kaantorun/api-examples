@@ -1,0 +1,345 @@
+{
+  "x-generator": "NSwag v13.10.8.0 (NJsonSchema v10.3.11.0 (Newtonsoft.Json v10.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "Winterwood Stock API",
+    "description": "Stock/Batch update details",
+    "contact": {
+      "name": "Kaan Torun",
+      "url": "https://www.digitedge.co.uk",
+      "email": "KaanTorun@digitedge.co.uk"
+    },
+    "version": "v1"
+  },
+  "host": "localhost:44336",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/WinterwoodStock/Auth/authenticate": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "Auth_RequestToken",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "authModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AuthModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/WinterwoodStock/Auth/registerauth": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "Auth_Register",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "authModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AuthModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/WinterwoodStock/GetAllStock": {
+      "get": {
+        "tags": [
+          "WinterwoodStock"
+        ],
+        "operationId": "WinterwoodStock_GetAllStock",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/StockModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WinterwoodStock/GetAllBatch": {
+      "get": {
+        "tags": [
+          "WinterwoodStock"
+        ],
+        "operationId": "WinterwoodStock_GetAllBatch",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/BatchModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WinterwoodStock/GetBatchById": {
+      "post": {
+        "tags": [
+          "WinterwoodStock"
+        ],
+        "operationId": "WinterwoodStock_GetBatchById",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "batchId",
+            "in": "query",
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/BatchModel"
+            }
+          }
+        }
+      }
+    },
+    "/WinterwoodStock": {
+      "post": {
+        "tags": [
+          "WinterwoodStock"
+        ],
+        "operationId": "WinterwoodStock_Post",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "batchModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BatchModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "WinterwoodStock"
+        ],
+        "operationId": "WinterwoodStock_Put",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "batchModel",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BatchModel"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "WinterwoodStock"
+        ],
+        "operationId": "WinterwoodStock_Delete",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "batchId",
+            "in": "query",
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AuthModel": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      }
+    },
+    "StockModel": {
+      "type": "object",
+      "required": [
+        "stockId",
+        "quantity"
+      ],
+      "properties": {
+        "stockId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "fruitType": {
+          "type": "string"
+        },
+        "varietyType": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "BatchModel": {
+      "type": "object",
+      "required": [
+        "batchId",
+        "quantity"
+      ],
+      "properties": {
+        "batchId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "fruitType": {
+          "type": "string"
+        },
+        "varietyType": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+  }
+}
