@@ -18,6 +18,12 @@ namespace WinterwoodStockApi.Controllers
             _authService = authService;
         }
 
+        /// <summary>
+        /// According to the username and password
+        /// system creates a token if the user exists
+        /// </summary>
+        /// <param name="authModel"></param>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpPost("authenticate")]
         public IActionResult RequestToken([FromBody] AuthModel authModel)
@@ -27,6 +33,11 @@ namespace WinterwoodStockApi.Controllers
             return Ok(token);
         }
 
+        /// <summary>
+        /// Creates a new user
+        /// </summary>
+        /// <param name="authModel"></param>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpPost("registerauth")]
         public IActionResult Register([FromBody] AuthModel authModel)

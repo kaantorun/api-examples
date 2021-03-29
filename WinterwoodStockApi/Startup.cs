@@ -17,6 +17,17 @@ using WinterwoodStock.Library.Services;
 
 namespace WinterwoodStockApi
 {
+    /// <summary>
+    /// .NET Core API with JwtSecurityToken security
+    /// Token expire time is 30min
+    /// it can be changed from appsettings.json
+    /// 
+    /// Unit of work
+    /// Generic repository
+    /// Entity framework
+    /// Microsoft logging
+    /// xUnit 
+    /// </summary>
     public class Startup
     {
         private readonly IConfiguration _configuration;
@@ -60,11 +71,6 @@ namespace WinterwoodStockApi
                 };
             });
 
-            /*services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-            });*/
-
             services.AddControllers();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -89,9 +95,7 @@ namespace WinterwoodStockApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-
             }
-
 
             List<string> urlsToIgnore = new List<string>();
             urlsToIgnore.Add("http://localhost:4200");
@@ -101,47 +105,12 @@ namespace WinterwoodStockApi
             //allow cors requests
             app.UseCors(builder => builder.WithOrigins(urlsToIgnore.ToArray()).AllowAnyMethod().AllowAnyHeader().AllowCredentials());
 
-            //app.UseSwagger();
-
-            //app.UseSwaggerUI(c =>
-            //{
-            //    c.SwaggerEndpoint("v1/swagger.json", "Winterwoodstock API V1");
-            //});
-
             // Register the Swagger generator and the Swagger UI middlewares
             app.UseOpenApi();
-            //Swashbuckle.AspNetCore.Swagger.SwaggerOptions options = new Swashbuckle.AspNetCore.Swagger.SwaggerOptions { };
-            //app.UseSwagger(options);
-
-            //app.UseSwaggerUI(c =>
-            //{
-            //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            //    c.RoutePrefix = string.Empty;
-            //});
-
-            //app.UseSwagger(c =>
-            //{
-            //    c.SerializeAsV2 = true;
-            //});
 
             app.UseSwaggerUi3();
 
-            // Enable middleware to serve generated Swagger as a JSON endpoint.
-            /*app.UseSwagger(c =>
-            {
-                c.SerializeAsV2 = false;
-            });
-
-            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-            // specifying the Swagger JSON endpoint.
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                c.RoutePrefix = string.Empty;
-            });*/
-
             app.UseHttpsRedirection();
-            //app.UseMiddleware<SetCurrentUserMiddleware>();
 
             app.UseRouting();
             app.UseAuthentication();

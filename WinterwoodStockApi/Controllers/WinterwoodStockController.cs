@@ -22,6 +22,12 @@ namespace WinterwoodStockApi.Controllers
             _winterwoodStockService = winterwoodStockService;
         }
 
+        /// <summary>
+        /// Gets all the stocks by batches of the system
+        /// It can be used after logging the system
+        /// Authentication uses Token
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("GetAllStock")]
         public List<StockModel> GetAllStock()
         {
@@ -34,6 +40,12 @@ namespace WinterwoodStockApi.Controllers
             return stocks;
         }
 
+        /// <summary>
+        /// Gets all the batches of the system
+        /// It can be used after logging the system
+        /// Authentication uses Token
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("GetAllBatch")]
         public List<BatchModel> GetAllBatch()
         {
@@ -46,6 +58,12 @@ namespace WinterwoodStockApi.Controllers
             return batches;
         }
 
+        /// <summary>
+        /// Gets a detail of a Batch by Id
+        /// It can be used after logging the system
+        /// Authentication uses Token
+        /// </summary>
+        /// <returns></returns>
         [HttpPost("GetBatchById")]
         public BatchModel GetBatchById(int batchId)
         {
@@ -59,6 +77,12 @@ namespace WinterwoodStockApi.Controllers
             return batchModel;
         }
 
+        /// <summary>
+        /// It creates a new batch
+        /// It can be used after logging the system
+        /// Authentication uses Token
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         public bool Post(BatchModel batchModel)
         {
@@ -71,6 +95,12 @@ namespace WinterwoodStockApi.Controllers
             return added;
         }
 
+        /// <summary>
+        /// It updates the batch
+        /// It can be used after logging the system
+        /// Authentication uses Token
+        /// </summary>
+        /// <returns></returns>
         [HttpPut]
         public bool Put(BatchModel batchModel)
         {
@@ -83,6 +113,12 @@ namespace WinterwoodStockApi.Controllers
             return updated;
         }
 
+        /// <summary>
+        /// It deletes the new batch
+        /// It can be used after logging the system
+        /// Authentication uses Token
+        /// </summary>
+        /// <returns></returns>
         [HttpDelete]
         public bool Delete(int batchId)
         {
